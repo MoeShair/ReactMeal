@@ -20,11 +20,11 @@ export function UserProgressProvider({children}){
         setUserProgress('')
     }
 
-    function showCheckOut(){
+    function showCheckout(){
         setUserProgress('checkout')
     }
 
-    function hideCheckOut(){
+    function hideCheckout(){
         setUserProgress('')
     }
 
@@ -32,8 +32,8 @@ export function UserProgressProvider({children}){
         progress: userProgress,
         showCart,
         hideCart,
-        showCheckOut,
-        hideCheckOut
+        showCheckout,
+        hideCheckout
     }
     return <UserProgressContext.Provider value={userProgressContext}>{children}</UserProgressContext.Provider>
 }

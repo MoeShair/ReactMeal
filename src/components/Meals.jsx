@@ -1,6 +1,8 @@
 import {useEffect, useState} from "react";
 import MealItem from "./MealItem.jsx";
+import useHTTP from "../hooks/useHTTP.js";
 
+const requestConfig = {}
 export default function Meals() {
     const [loadedMeals, setLoadedMeals] = useState([])
     useEffect(() => {
@@ -12,6 +14,11 @@ export default function Meals() {
         }
         fetchMeals()
     }, []);
+    // const {data: loadedMeals, isLoading, error } =useHTTP('http://localhost:3000/meals',requestConfig,[])
+    //
+    // if(isLoading){
+    //     return <p>Fetching meals.......</p>
+    // }
 
 
     return (
